@@ -5,13 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/common.css">
-    <title>Profile</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Dashboard</title>
 </head>
 
-<body>
+<body onload="loadHeader()" class="flex-col jcc aic">
     <!-- My works -->
     <!-- My bookshelf -->
     <!-- Settings -->
+
+    <main class="main">
+        <section class="stats">
+            <div class="card">
+                <h3>Total Submissions</h3>
+                <p id="total-submissions">0</p>
+            </div>
+            <div class="card">
+                <h3>Active Prompt</h3>
+                <p id="active-prompt">Loading...</p>
+            </div>
+        </section>
+
+        <section class="stories">
+            <h2>Community Library</h2>
+            <div id="community-stories" class="story-grid"></div>
+        </section>
+    </main>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/dashboard.js"></script>
 </body>
 
 </html>

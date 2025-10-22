@@ -13,13 +13,19 @@
     <main class="flex-col jcc aic">
         <section id="section-prompt-today" class="flex-col jcc aic">
             <h3>Today's Prompt</h3>
-            <p id="p-prompt-today">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sunt veritatis omnis
-                numquam voluptas vero, dolorum aperiam qui facilis consequatur, et, fugit quaerat quae. Quaerat sit modi
-                vero natus maxime.</p>
+            <p id="p-prompt-today"></p>
         </section>
-        <section class="flex-col jcc aic">
-            <div id="div-textarea" class="flex-row jcc aic">
+        <section class="section-textarea flex-col jcc aic">
+            <div id="div-textarea" class="flex-col jcc aic">
+                <input id="input-story-title" type="text" placeholder="Enter Title Here">
                 <textarea name="" id="textarea-write-story" placeholder="Write your story here..."></textarea>
+            </div>
+            <div id="div-story-genre" class="">
+            </div>
+            <div>
+                <input type="checkbox" id="checkbox-publish-anonymous">
+                <label for="checkbox-publish-anonymous">Check this box if you'd like your profile to remain
+                    anonymous.</label>
             </div>
         </section>
         <section id="section-publish-btns" class="flex-row aic">

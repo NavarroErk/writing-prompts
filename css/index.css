@@ -5,7 +5,9 @@
 }
 
 main{
+    width: 85%;
     max-width: 1500px;
+    min-width: 650px;
     margin: 10%;
 }
 section{
@@ -21,6 +23,11 @@ section{
     font-size: 1.2rem;
 }
 
+#p-prompt-today{
+    margin-top: 10px;
+    padding: 10px;
+}
+
 #div-textarea{
     width: 100%;
     height: 500px;
@@ -29,20 +36,48 @@ section{
     border-radius: 10px;
 }
 
-#textarea-write-story{
+#input-story-title, #textarea-write-story{
     width: 95%;
-    height: 95%;
-    font-size: 20pt;
+    background-color: black;
+    color: white;
+    border: none;
     padding: 15px;
+
+}
+
+#input-story-title{
+    outline: none;
+    margin-top: 10px;
+    font-size: 20pt;
+}
+
+#textarea-write-story{
+    height: 95%;
     line-height: 1.5;
     resize: none;
-    background-color: black;
-    border: none;
-    color: white;
+    font-size: 16pt;
 }
 
 #textarea-write-story:focus {
     outline: none;
+}
+
+.outline-red{
+    border: 2px solid red;
+}
+
+#div-story-genre{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 5px;
+    /* overflow: auto; */
+}
+.div-genre-label-group{
+    /* width: 100%; */
 }
 
 #section-publish-btns{

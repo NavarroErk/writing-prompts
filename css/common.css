@@ -38,11 +38,11 @@ a {
     color: inherit;
 }
 
-
 header{
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
+    background-color: rgb(27, 27, 27);
 }
 nav{
     height: 80px;
