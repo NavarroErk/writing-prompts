@@ -1,0 +1,79 @@
+.btn-publish-group{
+    font-size: 16pt;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+main{
+    max-width: 1500px;
+    margin: 10%;
+}
+section{
+    width: 100%;
+    margin-bottom: 10px;
+    color: white;
+}
+#section-prompt-today{
+    /* background-color: rgb(50, 50, 50); */
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+#div-textarea{
+    width: 100%;
+    height: 500px;
+    /* background-color: rgb(50, 50, 50); */
+    background-color: black;
+    border-radius: 10px;
+}
+
+#textarea-write-story{
+    width: 95%;
+    height: 95%;
+    font-size: 20pt;
+    padding: 15px;
+    line-height: 1.5;
+    resize: none;
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+#textarea-write-story:focus {
+    outline: none;
+}
+
+#section-publish-btns{
+    justify-content: space-evenly;
+    max-width: 900px;
+}
+
+.btn-publish-group{
+    width: 30%;
+    height: 40px;
+    border: 1px solid rgb(51, 51, 51);
+    color: white;
+    cursor: pointer;
+    background-color: black;
+    transition: background-color 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out;
+}
+.btn-publish-group:hover{
+    background-color: #131313;
+    border: 1px solid rgb(130, 130, 130);
+    /* transition: background-color 0.25s ease; */
+    /* transition: background-color 0.25s ease-in; */
+}
+
+
+/* #btn-clear{
+    background-color: rgb(194, 0, 0);
+}
+#btn-save{
+    background-color: rgb(23, 23, 255);
+}
+#btn-publish{
+    background-color: rgb(0, 158, 0);
+} */
