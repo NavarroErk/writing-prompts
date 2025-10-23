@@ -1,12 +1,16 @@
-// //! Run with 'nodemon server.js'
-// ! Run with 'console-ninja nodemon server.js'
+//! Run with 'nodemon server.js'
+//! Run with 'console-ninja nodemon server.js'
 
 import express from "express";
 import cors from "cors";
+import { Filter } from "bad-words";
+// import { array as baseList } from "badwords-list";
+
 const app = express();
 app.use(express.json());
 app.use(cors());
 const port = 3000;
+const filter = new Filter();
 
 let userSubmissions = [
   {
@@ -95,19 +99,30 @@ app.get("/api/prompt", (req, res) => {
 
 app.post("/api/submit-story", (req, res) => {
   console.log("Received: ", req.body);
-  const body = req.body;
-  if (
-    body.title == "" ||
-    body.story == "" ||
-    body.genre.length == 0 ||
-    body.username == ""
-  ) {
+  const prompt = req.body.prompt;
+  const title = filter.clean(req.body.title);
+  const story = filter.clean(req.body.story);
+  const genre = req.body.genre;
+  const anonymous = req.body.anonymous;
+  const username = filter.clean(req.body.username);
+  const date = req.body.date;
+
+  console.log(prompt);
+  console.log(title);
+  console.log(story);
+
+  if (title == "" || story == "" || genre.length == 0 || username == "") {
     console.log(userSubmissions.length);
 
     return res.status(400).json({ message: "error" });
   }
 
-  userSubmissions.push(req.body);
+  // userSubmissions.push(req.body);
+
+  // userSubmissions.forEach((element, key) => {});
+
+  // console.log(filter.clean(userSubmissions));
+
   console.log(userSubmissions.length);
 });
 
